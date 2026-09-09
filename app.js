@@ -355,19 +355,24 @@ class Component extends DCLogic {
         iconStyle: "width:22px;height:22px;background:center/contain no-repeat url('https://cdn.simpleicons.org/" + l.slug + "/ffffff');"
       })),
       badges: [
-        { label: "Claude", icon: "./icons/claude.webp" },
-        { label: "ChatGPT", icon: "./icons/chatgpt.png?v=2" },
-        { label: "Higgsfield", icon: "./icons/heygen.jpg" },
-        { label: "Canva", icon: "./icons/canva.jpg" },
-        { label: "Blender", icon: "./icons/blender.png" },
-        { label: "n8n", icon: "https://cdn.simpleicons.org/n8n" }
-      ].map(b => ({
-        label: b.label,
-        iconStyle: "background:#ffffff center/78% no-repeat url('" + b.icon + "');",
-        style: "display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:18px;"
-          + "background:#141414;border:1px solid rgba(255,255,255,.22);box-shadow:0 14px 34px rgba(0,0,0,.28);"
-          + "color:#ffffff;font-size:15px;font-weight:600;white-space:nowrap;"
-          + "transition:transform .3s cubic-bezier(.16,.84,.44,1),box-shadow .3s ease;"
+        { label: "Claude", icon: "./icons/claude.webp", mono: "C" },
+        { label: "ChatGPT", icon: "./icons/chatgpt.png?v=2", mono: "GPT" },
+        { label: "Higgsfield", icon: "./icons/heygen.jpg", mono: "HF" },
+        { label: "Canva", icon: "./icons/canva.jpg", mono: "Cv" },
+        { label: "Blender", icon: "./icons/blender.png", mono: "B" },
+        { label: "n8n", icon: "https://cdn.simpleicons.org/n8n", mono: "n8" }
+      ].map((b, i) => ({
+        label: b.label, mono: b.icon ? "" : b.mono,
+        iconStyle: b.icon ? "background:#fff center/86% no-repeat url('" + b.icon + "');" : "",
+        pos: (() => {
+          const spots = [[6, 26, 20], [2, 52, 6], [14, 74, 22], [66, 24, 6], [74, 52, 21], [58, 74, 5]][i];
+          return "position:absolute;left:" + spots[0] + "%;top:" + spots[1] + "%;z-index:" + spots[2] + ";animation-delay:" + (i * .7) + "s;";
+        })(),
+        style: "display:flex;align-items:center;justify-content:center;"
+          + "padding:8px 13px;border-radius:16px;border:1px solid var(--line);"
+          + "background:#fff;box-shadow:0 10px 26px rgba(0,0,0,.35);"
+          + "gap:8px;font-size:13px;font-weight:600;color:#0a0a0a;white-space:nowrap;"
+          + "transform:translateY(-50%) scale(" + [1.05, .78, 1.12, .82, 1, .74][i] + ");"
       })),
       svcStack: t.services.map((s, i) => {
         const n = t.services.length;
