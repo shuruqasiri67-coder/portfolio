@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شروق عسيري — بورتفوليو | Shuruq Asiri Portfolio</title>
+<meta name="description" content="بورتفوليو شروق أحمد عسيري — صناعة محتوى UGC، بناء المواقع وصفحات الهبوط، رد آلي صوتي للحجوزات، وأتمتة المهام المتكررة.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="شروق عسيري — بورتفوليو">
+<meta property="og:description" content="بين صناعة المحتوى وبناء الأنظمة اللي تشتغل خلف الكواليس.">
+<meta property="og:locale" content="ar_SA">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0a'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='16' fill='%23ffffff'%3Es%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&display=swap" rel="stylesheet">
+<script src="./three.min.js"></script>
+<style>
+@font-face{font-family:'Peanut Crystal';src:url('./fonts/PeanutCrystal.ttf') format('truetype');font-weight:400;font-display:swap;}
+@font-face{font-family:'Alnaseeb';src:url('./fonts/Alnaseeb-Regular.otf') format('opentype');font-weight:400;font-display:swap;}
+:root{
+  --bg:#ffffff; --deep:#f2f2f2; --mauve:#111111; --pink:#f2f2f2;
+  --ink:#0a0a0a; --ink-soft:#5c5c5c; --line:rgba(0,0,0,.14); --card:rgba(0,0,0,.04); --label:#6e6e6e;
+}
+:root[data-theme="dark"]{
+  --bg:#0a0a0a; --deep:#181818; --mauve:#e6e6e6; --pink:#ffffff;
+  --ink:#ffffff; --ink-soft:#b3b3b3; --line:rgba(255,255,255,.16); --card:rgba(255,255,255,.06); --label:#9a9a9a;
+}
+html,body{margin:0;padding:0;background:var(--bg);}
+h1,h2,h3{font-family:'Alnaseeb','IBM Plex Sans Arabic',serif;font-weight:400;}
+body{font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:var(--ink);
+  transition:background .45s ease,color .45s ease;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+a{color:var(--ink);text-decoration:none;transition:color .2s ease,opacity .2s ease;}
+a:hover{color:var(--label);opacity:1;}
+:root[data-theme="light"] a:hover{color:var(--mauve);}
+::selection{background:#0a0a0a;color:#ffffff;}
+:focus-visible{outline:2px solid var(--mauve);outline-offset:3px;border-radius:999px;}
+:root[data-view="mobile"] body{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px var(--line);overflow-x:hidden;}
+:root[data-view="mobile"] nav{left:50%;right:auto;width:430px;transform:translateX(-50%);}
+@keyframes rvin{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.rv{animation:rvin .6s cubic-bezier(.16,.84,.44,1) both;}
+.rv:nth-of-type(2){animation-delay:.08s;}
+.rv:nth-of-type(3){animation-delay:.16s;}
+.rv:nth-of-type(4){animation-delay:.24s;}
+.tilt{transition:transform .35s cubic-bezier(.16,.84,.44,1),box-shadow .35s ease;transform-style:preserve-3d;}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.float{animation:floaty 7.5s ease-in-out infinite;}
+.rail{scrollbar-width:thin;scrollbar-color:var(--mauve) transparent;}
+.rail::-webkit-scrollbar{height:6px;}
+.rail::-webkit-scrollbar-thumb{background:var(--mauve);border-radius:999px;}
+.rail::-webkit-scrollbar-track{background:transparent;}
+.rail.grabbing{cursor:grabbing;}
+.rail.grabbing *{user-select:none;}
+.glass{position:relative;overflow:hidden;background:color-mix(in oklab, var(--pink) 14%, transparent);backdrop-filter:blur(16px) saturate(1.15);-webkit-backdrop-filter:blur(16px) saturate(1.15);box-shadow:inset 0 1px 0 rgba(255,255,255,.45);}
+.glass::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 30%,color-mix(in oklab, var(--pink) 55%, transparent) 47%,transparent 62%);background-size:250% 250%;opacity:.55;animation:sheen 9s linear infinite;}
+@keyframes sheen{0%{background-position:120% 0}100%{background-position:-40% 0}}
+@media (prefers-reduced-motion: reduce){.rv{animation:none;}.tilt{transition:none;}.float,.glass::after{animation:none;}}
+</style>
+
+<style>
+#app{min-height:100vh;}
+.islot{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit;background:#0f0f0f;}
+.islot-empty{background:
+  radial-gradient(120% 90% at 30% 10%, rgba(255,255,255,.10), transparent 60%),
+  linear-gradient(150deg,#1b1b1b 0%,#101010 55%,#191919 100%);}
+.islot-empty::after{content:"";position:absolute;inset:0;
+  background:center/34% no-repeat url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Ctext x='60' y='38' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='rgba(255,255,255,0.16)'%3Esa%3C/text%3E%3C/svg%3E");}
+</style>
+
+</head>
+<body>
+<div id="app"></div>
+<template id="dc-tpl">
+<div dir="{{ dir }}" style="max-width:100%;overflow-x:hidden;font-family:'IBM Plex Sans Arabic',sans-serif;">
+
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,56px);backdrop-filter:blur(14px);background:color-mix(in oklab, var(--bg) 72%, transparent);border-bottom:1px solid var(--line);">
+    <a href="#top" style="font-family:'Alnaseeb','Bodoni Moda',serif;font-size:21px;letter-spacing:.02em;">{{ t.mark }}</a>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <a href="#work" style="display:none;font-size:14px;">{{ t.navWork }}</a>
+      <button onClick="{{ toggleView }}" aria-label="mobile view" title="{{ viewLabel }}" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:15px;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--ink);">{{ viewIcon }}</button>
+      <button onClick="{{ toggleTheme }}" aria-label="theme" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:15px;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--mauve);">{{ themeIcon }}</button>
+      <button onClick="{{ toggleLang }}" style="display:flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-family:'Bodoni Moda',serif;font-size:14px;letter-spacing:.08em;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--mauve);">{{ langLabel }}</button>
+    </div>
+  </nav>
+
+  <header id="top" style="position:relative;min-height:100svh;display:flex;align-items:center;padding:120px clamp(20px,6vw,96px) 80px;">
+    <canvas ref="{{ canvasRef }}" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
+    <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 0%, transparent 30%, var(--bg) 96%);pointer-events:none;"></div>
+    <div style="position:relative;z-index:2;max-width:900px;display:flex;flex-direction:column;gap:26px;">
+      <span class="rv" style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:12.5px;letter-spacing:.06em;color:var(--ink-soft);">{{ t.badge }}</span>
+      <h1 class="rv" style="margin:0;font-size:clamp(42px,8vw,92px);line-height:1.05;font-weight:600;letter-spacing:-.01em;text-wrap:balance;">{{ t.name }}</h1>
+      <p class="rv" style="margin:0;max-width:34em;font-size:clamp(17px,2.2vw,23px);line-height:1.65;color:var(--ink-soft);text-wrap:pretty;">{{ t.tagline }}</p>
+      <div class="rv" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;">
+        <a href="#work" style="display:inline-flex;align-items:center;height:52px;padding:0 30px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:15.5px;font-weight:500;transition:transform .25s ease,background .25s ease;" style-hover="background:var(--ink-soft);transform:translateY(-2px);color:var(--bg);">{{ t.ctaWork }}</a>
+        <a href="#contact" style="display:inline-flex;align-items:center;height:52px;padding:0 30px;border-radius:999px;border:1px solid var(--line);font-size:15.5px;font-weight:500;transition:transform .25s ease,background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--mauve);transform:translateY(-2px);">{{ t.ctaContact }}</a>
+      </div>
+    </div>
+  </header>
+
+  <div style="height:1px;background:var(--line);margin:0 clamp(20px,6vw,96px);"></div>
+
+  <section style="padding:clamp(70px,10vw,130px) clamp(20px,6vw,96px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,6vw,80px);align-items:start;">
+    <div class="rv" style="display:flex;flex-direction:column;gap:18px;">
+      <span style="font-family:'Bodoni Moda',serif;font-size:13px;letter-spacing:.22em;color:var(--label);">{{ t.aboutKicker }}</span>
+      <h2 style="margin:0;font-size:clamp(28px,4vw,44px);line-height:1.25;font-weight:600;text-wrap:balance;">{{ t.aboutTitle }}</h2>
+    </div>
+    <div class="rv" style="display:flex;flex-direction:column;gap:26px;">
+      <p style="margin:0;font-size:clamp(16px,1.8vw,19px);line-height:1.85;color:var(--ink-soft);text-wrap:pretty;">{{ t.aboutBody }}</p>
+    </div>
+  </section>
+
+  <div style="height:1px;background:var(--line);margin:0 clamp(20px,6vw,96px);"></div>
+
+
+
+  <section style="padding:clamp(50px,8vw,90px) clamp(20px,6vw,96px) clamp(70px,10vw,130px);display:flex;flex-direction:column;gap:38px;">
+    <div dir="ltr" class="rv" style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(24px,5vw,64px);">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:20px;flex:0 1 360px;min-width:280px;">
+      <div style="position:relative;width:100%;height:clamp(320px,48vw,370px);">
+        <sc-for list="{{ svcStack }}" as="s" hint-placeholder-count="4">
+          <div dir="{{ dir }}" onClick="{{ s.go }}" style="{{ s.style }}">
+            <span style="font-family:'Bodoni Moda',serif;font-size:12px;color:#6e6e6e;">{{ s.num }}</span>
+            <h3 style="margin:0;font-size:15px;font-weight:600;line-height:1.4;">{{ s.title }}</h3>
+            <p style="margin:0;font-size:12.5px;line-height:1.6;color:#5c5c5c;">{{ s.desc }}</p>
+          </div>
+        </sc-for>
+        <div style="position:absolute;inset-inline:clamp(6px,3vw,20px);bottom:0;z-index:20;display:flex;flex-direction:column;align-items:flex-start;">
+        <div class="glass" style="width:44%;height:24px;border-radius:16px 16px 0 0;background:color-mix(in oklab, #111111 90%, transparent);border:1px solid rgba(255,255,255,.18);border-bottom:0;"></div>
+        <div dir="{{ dir }}" class="glass" style="width:100%;border-radius:0 24px 24px 24px;background:color-mix(in oklab, #111111 90%, transparent);color:#ffffff;border:1px solid rgba(255,255,255,.18);padding:16px 18px 14px;display:flex;flex-direction:column;gap:5px;z-index:20;box-shadow:0 26px 60px rgba(0,0,0,.16);">
+          <sc-for list="{{ svcList }}" as="s" hint-placeholder-count="4">
+            <button onClick="{{ s.go }}" style="{{ s.rowStyle }}">
+              <span style="{{ s.dotStyle }}"></span>
+              <span style="font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ s.title }}</span>
+            </button>
+          </sc-for>
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;">
+            <span style="font-size:11.5px;color:rgba(255,255,255,.72);">{{ t.svcHint }}</span>
+            <button onClick="{{ nextSvc }}" aria-label="next" style="flex:none;width:48px;height:48px;border-radius:999px;border:0;background:#ffffff;color:#0a0a0a;font-size:20px;cursor:pointer;transition:transform .25s ease,background .25s ease;" style-hover="background:var(--mauve);transform:translateY(-2px);">↻</button>
+          </div>
+        </div>
+        </div>
+      </div>
+      <h2 dir="{{ dir }}" style="margin:0;font-size:clamp(30px,5vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1;">{{ t.svcTitle }}</h2>
+      </div>
+      <div dir="ltr" style="position:relative;flex:1 1 380px;min-width:300px;aspect-ratio:16/11;">
+      <svg viewBox="0 0 900 560" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;">
+      </svg>
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-56%);z-index:10;display:flex;align-items:center;justify-content:center;padding:clamp(12px,2vw,22px) clamp(18px,3vw,36px);border-radius:24px;background:#141414;border:1px solid rgba(255,255,255,.22);box-shadow:0 26px 60px rgba(0,0,0,.55);">
+        <h2 style="margin:0;text-align:center;color:#ffffff;font-family:'Peanut Crystal','IBM Plex Sans Arabic',sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,62px);letter-spacing:-.01em;line-height:1;white-space:nowrap;">port<span style="color:#8f8f8f;">f</span>olio</h2>
+      </div>
+      <sc-for list="{{ badges }}" as="b" hint-placeholder-count="0">
+        <div class="float" style="{{ b.pos }}"><div style="{{ b.style }}"><span style="position:relative;display:flex;align-items:center;justify-content:center;width:clamp(20px,2.4vw,26px);height:clamp(20px,2.4vw,26px);border-radius:8px;background:rgba(0,0,0,.08);font-size:11px;font-weight:700;color:#0a0a0a;flex:none;{{ b.iconStyle }}">{{ b.mono }}</span><span>{{ b.label }}</span></div></div>
+      </sc-for>
+    </div>
+    </div>
+  </section>
+  <div style="height:1px;background:var(--line);margin:0 clamp(20px,6vw,96px);"></div>
+
+  <section id="work" style="padding:clamp(50px,8vw,90px) clamp(20px,6vw,96px) clamp(70px,10vw,130px);display:flex;flex-direction:column;gap:38px;">
+    <div class="rv" style="display:flex;flex-direction:column;gap:14px;">
+      <span style="font-family:'Bodoni Moda',serif;font-size:13px;letter-spacing:.22em;color:var(--label);">{{ t.workKicker }}</span>
+      <h2 style="margin:0;font-size:clamp(28px,4vw,44px);font-weight:600;">{{ t.workTitle }}</h2>
+      <p style="margin:0;max-width:44em;font-size:16px;line-height:1.8;color:var(--ink-soft);">{{ t.workNote }}</p>
+    </div>
+    <div dir="ltr" ref="{{ railRef }}" onPointerDown="{{ dragStart }}" onPointerMove="{{ dragMove }}" onPointerUp="{{ dragEnd }}" onPointerLeave="{{ dragEnd }}" style="position:relative;height:clamp(420px,58vw,540px);perspective:1500px;perspective-origin:50% 45%;touch-action:pan-y;cursor:grab;user-select:none;">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+        <div onClick="{{ p.pick }}" class="glass" style="{{ p.style }}">
+          <div style="position:relative;flex:1 1 auto;min-height:0;">
+            <image-slot id="{{ p.slot }}" shape="rect" src="{{ p.src }}" placeholder="{{ p.slotHint }}"></image-slot>
+          </div>
+          <div dir="{{ dir }}" style="display:flex;flex-direction:column;gap:8px;padding:16px 18px 18px;background:color-mix(in oklab, #111111 80%, transparent);color:#ffffff;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+              <h3 style="margin:0;font-size:17px;font-weight:600;">{{ p.title }}</h3>
+              <span style="font-size:11px;letter-spacing:.08em;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.3);">{{ p.status }}</span>
+            </div>
+            <p style="margin:0;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.76);">{{ p.desc }}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <sc-for list="{{ p.tags }}" as="tag" hint-placeholder-count="2">
+                <span style="font-size:11.5px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.16);">{{ tag }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+      <button onClick="{{ prevProj }}" aria-label="prev" style="width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:17px;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--mauve);">‹</button>
+      <div style="display:flex;gap:8px;">
+        <sc-for list="{{ projDots }}" as="d" hint-placeholder-count="3">
+          <button onClick="{{ d.go }}" aria-label="project" style="{{ d.style }}"></button>
+        </sc-for>
+      </div>
+      <button onClick="{{ nextProj }}" aria-label="next" style="width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:17px;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--mauve);">›</button>
+    </div>
+  </section>
+
+  <div style="height:1px;background:var(--line);margin:0 clamp(20px,6vw,96px);"></div>
+
+
+  <div style="height:1px;background:var(--line);margin:0 clamp(20px,6vw,96px);"></div>
+
+  <section id="contact" style="padding:clamp(60px,9vw,110px) clamp(20px,6vw,96px) clamp(50px,7vw,80px);display:flex;flex-direction:column;gap:30px;align-items:flex-start;">
+    <span class="rv" aria-label="{{ t.contactKicker }}" title="{{ t.contactKicker }}" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:19px;">✉</span>
+    <h2 class="rv" style="margin:0;font-size:clamp(32px,6vw,68px);line-height:1.15;font-weight:600;max-width:16em;text-wrap:balance;">{{ t.contactTitle }}</h2>
+    <div class="rv" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+      <span style="font-size:clamp(16px,2.4vw,22px);letter-spacing:.01em;">{{ email }}</span>
+      <button onClick="{{ copyEmail }}" aria-label="{{ copyLabel }}" title="{{ copyLabel }}" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:16px;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--ink);">{{ copyIcon }}</button>
+    </div>
+    <div class="rv" style="display:flex;flex-wrap:wrap;gap:10px;">
+      <a href="{{ mailto }}" aria-label="email" title="{{ email }}" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;border:1px solid var(--line);transition:background .25s ease,border-color .25s ease,transform .25s ease;" style-hover="background:var(--card);border-color:var(--ink);transform:translateY(-2px);"><span style="{{ mailIconStyle }}"></span></a>
+      <sc-for list="{{ links }}" as="l" hint-placeholder-count="2">
+        <a href="{{ l.href }}" target="_blank" rel="noopener" aria-label="{{ l.label }}" title="{{ l.label }}" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;border:1px solid var(--line);transition:background .25s ease,border-color .25s ease,transform .25s ease;" style-hover="background:var(--card);border-color:var(--ink);transform:translateY(-2px);"><span style="{{ l.iconStyle }}"></span></a>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding:26px clamp(20px,6vw,96px) 34px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-soft);">
+    <span>{{ t.footer }}</span>
+    <span style="display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;border:1px solid var(--line);">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:6px;background:var(--ink);color:var(--bg);font-size:11px;font-weight:700;">✓</span>
+      <span>{{ t.freelanceLabel }}</span>
+      <span style="color:var(--ink);letter-spacing:.04em;">{{ t.freelanceNo }}</span>
+    </span>
+    <span style="font-family:'Bodoni Moda',serif;letter-spacing:.06em;">2026</span>
+  </footer>
+
+  <sc-if value="{{ page }}" hint-placeholder-val="{{ false }}">
+    <div dir="{{ dir }}" style="position:fixed;inset:0;z-index:70;overflow-y:auto;background:var(--bg);padding:clamp(24px,5vw,64px) clamp(20px,6vw,96px) clamp(50px,8vw,90px);display:flex;flex-direction:column;gap:clamp(24px,4vw,40px);">
+      <button onClick="{{ closePage }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-family:'IBM Plex Sans Arabic',sans-serif;font-size:14.5px;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--ink);">← {{ page.back }}</button>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <h2 style="margin:0;font-size:clamp(28px,5vw,54px);font-weight:700;line-height:1.15;letter-spacing:-.02em;">{{ page.title }}</h2>
+        <p style="margin:0;max-width:46em;font-size:clamp(15px,1.7vw,18px);line-height:1.8;color:var(--ink-soft);">{{ page.desc }}</p>
+        <span style="font-size:13px;color:var(--ink-soft);letter-spacing:.1em;">{{ page.intro }}</span>
+      </div>
+      <div dir="ltr" onPointerDown="{{ dragStart }}" onPointerMove="{{ page.swipe }}" onPointerUp="{{ dragEnd }}" onPointerLeave="{{ dragEnd }}" style="position:relative;flex:none;height:clamp(400px,56vw,520px);perspective:1500px;perspective-origin:50% 45%;touch-action:pan-y;cursor:grab;user-select:none;">
+        <sc-for list="{{ page.works }}" as="w" hint-placeholder-count="2">
+          <article onClick="{{ w.pick }}" class="glass" style="{{ w.style }}">
+            <div style="position:relative;flex:1 1 auto;min-height:0;">
+              <image-slot id="{{ w.slot }}" shape="rect" src="{{ w.src }}" placeholder="{{ w.hint }}"></image-slot>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;padding:16px 18px 18px;background:color-mix(in oklab, #111111 80%, transparent);color:#ffffff;">
+              <h3 style="margin:0;font-size:17px;font-weight:600;">{{ w.title }}</h3>
+              <sc-if value="{{ w.href }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ w.href }}" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;height:38px;padding:0 18px;border-radius:999px;background:#ffffff;color:#0a0a0a;font-size:13.5px;transition:transform .25s ease,opacity .25s ease;" style-hover="opacity:.85;color:#0a0a0a;transform:translateY(-2px);">{{ w.linkLabel }}</a>
+              </sc-if>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+        <button onClick="{{ page.prev }}" aria-label="prev" style="width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:17px;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--ink);">‹</button>
+        <div style="display:flex;gap:8px;">
+          <sc-for list="{{ page.dots }}" as="d" hint-placeholder-count="2">
+            <button onClick="{{ d.go }}" aria-label="work" style="{{ d.style }}"></button>
+          </sc-for>
+        </div>
+        <button onClick="{{ page.next }}" aria-label="next" style="width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:17px;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--ink);">›</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ active }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeModal }}" style="position:fixed;inset:0;z-index:60;display:flex;align-items:flex-end;justify-content:center;padding:0;background:rgba(20,9,14,.72);backdrop-filter:blur(8px);animation:none;">
+      <div onClick="{{ stop }}" dir="{{ dir }}" style="width:min(860px,100%);max-height:92svh;overflow:auto;background:var(--bg);border:1px solid var(--line);border-radius:30px 30px 0 0;padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:22px;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <h3 style="margin:0;font-size:clamp(24px,3.6vw,34px);font-weight:600;">{{ active.title }}</h3>
+          <button onClick="{{ closeModal }}" aria-label="close" style="flex:none;width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:18px;cursor:pointer;">×</button>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:20px;overflow:hidden;">
+          <image-slot id="{{ active.slotWide }}" shape="rect" src="{{ active.src }}" placeholder="{{ active.slotHint }}"></image-slot>
+        </div>
+        <sc-if value="{{ active.href }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ active.href }}" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;height:46px;padding:0 24px;border-radius:999px;background:var(--mauve);color:#fff;font-size:15px;transition:transform .25s ease,background .25s ease;" style-hover="background:var(--deep);color:var(--ink);transform:translateY(-2px);">{{ active.linkLabel }}</a>
+        </sc-if>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:22px;">
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <span style="font-size:12.5px;letter-spacing:.14em;color:var(--label);">{{ t.problem }}</span>
+            <p style="margin:0;font-size:15px;line-height:1.8;color:var(--ink-soft);">{{ active.problem }}</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <span style="font-size:12.5px;letter-spacing:.14em;color:var(--label);">{{ t.approach }}</span>
+            <p style="margin:0;font-size:15px;line-height:1.8;color:var(--ink-soft);">{{ active.approach }}</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <span style="font-size:12.5px;letter-spacing:.14em;color:var(--label);">{{ t.result }}</span>
+            <p style="margin:0;font-size:15px;line-height:1.8;color:var(--ink-soft);">{{ active.result }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</template>
+<script src="./runtime.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
