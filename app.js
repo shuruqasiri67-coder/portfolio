@@ -100,7 +100,7 @@ const STR = {
 };
 
 class Component extends DCLogic {
-  state = { lang: "ar", theme: "dark", active: null, copied: false, svc: 0, proj: 0, page: null, work: 0, view: "desktop" };
+  state = { lang: "ar", theme: "light", active: null, copied: false, svc: 0, proj: 0, page: null, work: 0, view: "desktop" };
   canvasRef = React.createRef();
   railRef = React.createRef();
 

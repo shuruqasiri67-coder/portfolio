@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="dark">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>شروق عسيري — بورتفوليو | Shuruq Asiri Portfolio</title>
 <meta name="description" content="بورتفوليو شروق أحمد عسيري — صناعة محتوى UGC، بناء المواقع وصفحات الهبوط، رد آلي صوتي للحجوزات، وأتمتة المهام المتكررة.">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://shuruqasiri.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="شروق عسيري — بورتفوليو">
@@ -69,9 +69,14 @@ a:hover{color:var(--label);opacity:1;}
 #app{min-height:100vh;}
 .islot{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit;background:#0f0f0f;}
 .islot-empty{background:
+  radial-gradient(120% 90% at 30% 10%, rgba(0,0,0,.05), transparent 60%),
+  linear-gradient(150deg,#f4f4f4 0%,#e7e7e7 55%,#f0f0f0 100%);}
+:root[data-theme="dark"] .islot-empty{background:
   radial-gradient(120% 90% at 30% 10%, rgba(255,255,255,.10), transparent 60%),
   linear-gradient(150deg,#1b1b1b 0%,#101010 55%,#191919 100%);}
 .islot-empty::after{content:"";position:absolute;inset:0;
+  background:center/34% no-repeat url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Ctext x='60' y='38' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='rgba(0,0,0,0.14)'%3Esa%3C/text%3E%3C/svg%3E");}
+:root[data-theme="dark"] .islot-empty::after{
   background:center/34% no-repeat url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Ctext x='60' y='38' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='rgba(255,255,255,0.16)'%3Esa%3C/text%3E%3C/svg%3E");}
 </style>
 
