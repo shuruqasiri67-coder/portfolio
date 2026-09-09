@@ -164,6 +164,14 @@ a:hover{color:var(--label);opacity:1;}
       <h2 dir="{{ dir }}" style="margin:0;font-size:clamp(30px,5vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1;">{{ t.svcTitle }}</h2>
       </div>
     </div>
+    <div class="rv" style="display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2vw,20px);width:100%;padding-top:clamp(6px,2vw,18px);">
+      <h3 dir="ltr" style="margin:0;text-align:center;font-size:clamp(18px,2.6vw,26px);font-weight:600;letter-spacing:-.01em;line-height:1.2;">Tools I master</h3>
+      <div dir="ltr" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(10px,1.6vw,16px);">
+        <sc-for list="{{ badges }}" as="b" hint-placeholder-count="6">
+          <div style="{{ b.style }}"><span style="flex:none;width:24px;height:24px;border-radius:7px;{{ b.iconStyle }}"></span><span>{{ b.label }}</span></div>
+        </sc-for>
+      </div>
+    </div>
   </section>
   <div style="height:1px;background:var(--line);margin:0 clamp(20px,6vw,96px);"></div>
 

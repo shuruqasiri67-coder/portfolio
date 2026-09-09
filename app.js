@@ -355,28 +355,19 @@ class Component extends DCLogic {
         iconStyle: "width:22px;height:22px;background:center/contain no-repeat url('https://cdn.simpleicons.org/" + l.slug + "/ffffff');"
       })),
       badges: [
-        { label: "Claude", icon: "./icons/claude.webp", mono: "C", x: 6, y: 6, r: -9, s: 1 },
-        { label: "ChatGPT", icon: "./icons/chatgpt.png?v=2", mono: "GPT", x: 74, y: 2, r: 8, s: 1 },
-        { label: "Higgsfield", icon: "./icons/heygen.jpg", mono: "HF", x: 40, y: -4, r: -4, s: .92 },
-        { label: "Canva", icon: "./icons/canva.jpg", mono: "Cv", x: 2, y: 72, r: 7, s: .88 },
-        { label: "Blender", icon: "./icons/blender.png", mono: "B", x: 55, y: 78, r: -7, s: .9 },
-        { label: "n8n", icon: "https://cdn.simpleicons.org/n8n", mono: "n8", x: 84, y: 62, r: 6, s: .86 }
-      ].map((b, i, arr) => ({
-        label: b.label, mono: b.icon ? "" : b.mono,
-        arc: (() => {
-          const th = Math.PI * (i / (arr.length - 1));
-          return { x: 50 - 46 * Math.cos(th), y: 52 + 40 * Math.sin(th), rot: -22 + 44 * (i / (arr.length - 1)) };
-        })(),
-        iconStyle: b.icon ? "background:#fff center/86% no-repeat url('" + b.icon + "');" : "",
-        pos: (() => {
-          const spots = [[6, 26, 20], [2, 52, 6], [14, 74, 22], [66, 24, 6], [74, 52, 21], [58, 74, 5]][i];
-          return "position:absolute;left:" + spots[0] + "%;top:" + spots[1] + "%;z-index:" + spots[2] + ";animation-delay:" + (i * .7) + "s;";
-        })(),
-        style: "display:flex;align-items:center;justify-content:center;"
-          + "padding:8px 13px;border-radius:16px;border:1px solid var(--line);"
-          + "background:#fff;box-shadow:0 10px 26px rgba(0,0,0,.35);border-radius:16px;"
-          + "gap:8px;font-size:13px;font-weight:600;color:#0a0a0a;white-space:nowrap;"
-          + "transform:translateY(-50%) scale(" + [1.05, .78, 1.12, .82, 1, .74][i] + ");"
+        { label: "Claude", icon: "./icons/claude.webp" },
+        { label: "ChatGPT", icon: "./icons/chatgpt.png?v=2" },
+        { label: "Higgsfield", icon: "./icons/heygen.jpg" },
+        { label: "Canva", icon: "./icons/canva.jpg" },
+        { label: "Blender", icon: "./icons/blender.png" },
+        { label: "n8n", icon: "https://cdn.simpleicons.org/n8n" }
+      ].map(b => ({
+        label: b.label,
+        iconStyle: "background:#ffffff center/78% no-repeat url('" + b.icon + "');",
+        style: "display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:18px;"
+          + "background:#141414;border:1px solid rgba(255,255,255,.22);box-shadow:0 14px 34px rgba(0,0,0,.28);"
+          + "color:#ffffff;font-size:15px;font-weight:600;white-space:nowrap;"
+          + "transition:transform .3s cubic-bezier(.16,.84,.44,1),box-shadow .3s ease;"
       })),
       svcStack: t.services.map((s, i) => {
         const n = t.services.length;
