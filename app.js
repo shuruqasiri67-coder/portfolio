@@ -1,6 +1,6 @@
 const STR = {
   ar: {
-    mark: "شروق عسيري", navWork: "الأعمال", badge: "صناعة محتوى · أنظمة · أتمتة",
+    mark: "شروق عسيري", navWork: "الأعمال", topMark: "ملف الأعمال", badge: "صناعة محتوى · أنظمة · أتمتة",
     name: "shuruq ahmad asiri",
     tagline: "بين صناعة المحتوى وبناء الأنظمة اللي تشتغل خلف الكواليس.",
     ctaWork: "شوف أعمالي", ctaContact: "تواصل معي",
@@ -61,7 +61,7 @@ const STR = {
     links: [{ label: "واتساب", href: "https://wa.me/966502443133", slug: "whatsapp" }, { label: "تيك توك", href: "#", slug: "tiktok" }]
   },
   en: {
-    mark: "Shuruq Asiri", navWork: "Work", badge: "Content · Systems · Automation",
+    mark: "Shuruq Asiri", navWork: "Work", topMark: "My work", badge: "Content · Systems · Automation",
     name: "shuruq ahmad asiri",
     tagline: "Between making content and building the systems that run behind the scenes.",
     ctaWork: "See my work", ctaContact: "Get in touch",

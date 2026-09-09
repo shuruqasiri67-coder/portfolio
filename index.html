@@ -98,7 +98,13 @@ a:hover{color:var(--label);opacity:1;}
     </div>
   </nav>
 
-  <header id="top" style="position:relative;min-height:100svh;display:flex;align-items:center;padding:120px clamp(20px,6vw,96px) 80px;">
+  <section style="padding:calc(66px + clamp(28px,5vw,56px)) clamp(20px,6vw,96px) clamp(24px,4vw,44px);display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2vw,20px);">
+    <h2 dir="{{ dir }}" class="rv" style="margin:0;text-align:center;font-size:clamp(20px,3.4vw,34px);font-weight:600;letter-spacing:-.01em;line-height:1.2;">{{ t.topMark }}</h2>
+    <div class="rv" dir="ltr" style="display:flex;align-items:center;justify-content:center;padding:clamp(12px,2vw,22px) clamp(20px,3.4vw,40px);border-radius:24px;background:#141414;border:1px solid rgba(255,255,255,.22);box-shadow:0 26px 60px rgba(0,0,0,.28);">
+      <span style="color:#ffffff;font-family:'Peanut Crystal','IBM Plex Sans Arabic',sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,62px);letter-spacing:-.01em;line-height:1;white-space:nowrap;">port<span style="color:#8f8f8f;">f</span>olio</span>
+    </div>
+  </section>
+  <header id="top" style="position:relative;min-height:100svh;display:flex;align-items:center;padding:clamp(20px,4vw,48px) clamp(20px,6vw,96px) 80px;">
     <canvas ref="{{ canvasRef }}" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
     <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 0%, transparent 30%, var(--bg) 96%);pointer-events:none;"></div>
     <div style="position:relative;z-index:2;max-width:900px;display:flex;flex-direction:column;gap:26px;">
@@ -129,7 +135,7 @@ a:hover{color:var(--label);opacity:1;}
 
 
   <section style="padding:clamp(50px,8vw,90px) clamp(20px,6vw,96px) clamp(70px,10vw,130px);display:flex;flex-direction:column;gap:38px;">
-    <div dir="ltr" class="rv" style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(24px,5vw,64px);">
+    <div dir="ltr" class="rv" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(24px,5vw,64px);">
       <div style="display:flex;flex-direction:column;align-items:flex-start;gap:20px;flex:0 1 360px;min-width:280px;">
       <div style="position:relative;width:100%;height:clamp(320px,48vw,370px);">
         <sc-for list="{{ svcStack }}" as="s" hint-placeholder-count="4">
@@ -157,16 +163,6 @@ a:hover{color:var(--label);opacity:1;}
       </div>
       <h2 dir="{{ dir }}" style="margin:0;font-size:clamp(30px,5vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1;">{{ t.svcTitle }}</h2>
       </div>
-      <div dir="ltr" style="position:relative;flex:1 1 380px;min-width:300px;aspect-ratio:16/11;">
-      <svg viewBox="0 0 900 560" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;">
-      </svg>
-      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-56%);z-index:10;display:flex;align-items:center;justify-content:center;padding:clamp(12px,2vw,22px) clamp(18px,3vw,36px);border-radius:24px;background:#141414;border:1px solid rgba(255,255,255,.22);box-shadow:0 26px 60px rgba(0,0,0,.55);">
-        <h2 style="margin:0;text-align:center;color:#ffffff;font-family:'Peanut Crystal','IBM Plex Sans Arabic',sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,62px);letter-spacing:-.01em;line-height:1;white-space:nowrap;">port<span style="color:#8f8f8f;">f</span>olio</h2>
-      </div>
-      <sc-for list="{{ badges }}" as="b" hint-placeholder-count="0">
-        <div class="float" style="{{ b.pos }}"><div style="{{ b.style }}"><span style="position:relative;display:flex;align-items:center;justify-content:center;width:clamp(20px,2.4vw,26px);height:clamp(20px,2.4vw,26px);border-radius:8px;background:rgba(0,0,0,.08);font-size:11px;font-weight:700;color:#0a0a0a;flex:none;{{ b.iconStyle }}">{{ b.mono }}</span><span>{{ b.label }}</span></div></div>
-      </sc-for>
-    </div>
     </div>
   </section>
   <div style="height:1px;background:var(--line);margin:0 clamp(20px,6vw,96px);"></div>
