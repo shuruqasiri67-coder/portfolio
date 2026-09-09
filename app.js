@@ -319,7 +319,7 @@ class Component extends DCLogic {
     const cur = this.state.proj;
     const projects = t.cats.map((p, i) => Object.assign({}, p, {
       status: "0" + (i + 1),
-      slot: "cat-" + i, src: ["./assets/web-build.png", "", "./assets/voice-reply.png", "./assets/automation.png"][i] || "",
+      slot: "cat-" + i, src: ["./assets/web-build.png", "./assets/ugc.png", "./assets/voice-reply.png", "./assets/automation.png"][i] || "",
       slotHint: lang === "ar" ? "أفلتي صورة الغلاف هنا" : "Drop the cover image here",
       pick: () => { if (this.dragged) return; if (i !== cur) this.setState({ proj: i }); else this.setState({ page: i, work: 0 }); },
       style: (() => {
