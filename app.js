@@ -16,6 +16,17 @@ const STR = {
     problem: "المشكلة", approach: "طريقتي", result: "النتيجة",
     tools: ["n8n", "Make", "Claude", "ElevenLabs", "CapCut", "Figma", "Notion"],
     back: "رجوع", soonLabel: "مساحة لعمل قادم", pageIntro: "الأعمال المنشورة تحت هذه الخدمة.",
+    shopOraAbout: {
+      title: "نبذة عن مشروع شوب أورا",
+      lead: "شوب أورا منصة إلكترونية تجمع مواقع التسوق العالمية الموثوقة في مكان واحد، وتقدّمها للمتسوّقة الخليجية مرتّبة ومصنّفة وجاهزة للتصفّح.",
+      blocks: [
+        { label: "المشكلة", text: "المتسوّقة اليوم تكتشف المواقع بشكل عشوائي — عبر فيديو عابر أو توصية من صديقة — ثم تنسى الاسم ولا تجده مرة أخرى. وحتى حين تجده، تبقى الأسئلة نفسها: هل الموقع موثوق؟ هل يشحن للسعودية؟ كم التكلفة الحقيقية بعد الشحن؟" },
+        { label: "الحل", text: "تعمل المنصة كدليل تسوّق مُنسَّق. كل موقع يُضاف إليها يمرّ بمراجعة شخصية قبل النشر، ويُصنَّف ضمن أقسامه (عبايات، فساتين مناسبات، أحذية، حقائب، عطور)، مع معلوماته الأساسية: بلد المنشأ، نطاق الأسعار، وسياسة الشحن للخليج." },
+        { label: "الجمهور المستهدف", text: "نساء السعودية والخليج بين ٢٥ و٤٤ سنة، يبحثن عن قطع مميزة غير متكررة بأسعار معقولة، ويفضّلن التسوّق الإلكتروني على المتاجر التقليدية." },
+        { label: "نموذج العمل", text: "المحتوى على تيك توك يبني الثقة ويعرّف بالمواقع، والمنصة تحتفظ بها وتنظّمها. الإيرادات تأتي لاحقاً من العمولات وأكواد الخصم والشراكات مع المتاجر." },
+        { label: "ما يميّزها", text: "الفلترة اليدوية والحياد — لا مواقع مدفوعة ولا إعلانات، والمحتوى قائم على تجربة فعلية." }
+      ]
+    },
     cats: [
       { title: "بناء المواقع وصفحات الهبوط", desc: "مواقع تعريفية وصفحات هبوط جاهزة للنشر.", tags: ["ويب", "صفحات هبوط"], count: 3 },
       { title: "صناعة محتوى UGC", desc: "فيديوهات واقعية للمنتجات للمتاجر والعلامات الصغيرة.", tags: ["UGC", "فيديو"], count: 3 },
@@ -66,6 +77,17 @@ const STR = {
     problem: "Problem", approach: "Approach", result: "Result",
     tools: ["n8n", "Make", "Claude", "ElevenLabs", "CapCut", "Figma", "Notion"],
     back: "Back", soonLabel: "Slot for upcoming work", pageIntro: "Work published under this service.",
+    shopOraAbout: {
+      title: "About ShopOra",
+      lead: "ShopOra is a platform that gathers trusted international shopping sites in one place and presents them to Gulf shoppers — sorted, categorised and ready to browse.",
+      blocks: [
+        { label: "Problem", text: "Shoppers find sites at random — a passing video, a friend's recommendation — then forget the name and never find it again. And even when they do, the same questions remain: is the site trustworthy? Does it ship to Saudi Arabia? What does it really cost after shipping?" },
+        { label: "Solution", text: "The platform works as a curated shopping directory. Every site is personally reviewed before it goes live, then filed under its categories (abayas, occasion dresses, shoes, bags, perfume) with its essentials: country of origin, price range, and shipping policy to the Gulf." },
+        { label: "Audience", text: "Women in Saudi Arabia and the Gulf aged 25 to 44, looking for distinctive pieces at reasonable prices, who prefer shopping online over traditional stores." },
+        { label: "Business model", text: "TikTok content builds trust and introduces the sites; the platform keeps and organises them. Revenue comes later from commissions, discount codes, and partnerships with the stores." },
+        { label: "What sets it apart", text: "Hand-picked and independent — no paid placements, no ads, and every entry based on actual experience." }
+      ]
+    },
     cats: [
       { title: "Sites and landing pages", desc: "Profile sites and launch-ready landing pages.", tags: ["Web", "Landing"], count: 3 },
       { title: "UGC content", desc: "Real-feeling product videos for small shops and brands.", tags: ["UGC", "Video"], count: 3 },
@@ -423,6 +445,7 @@ class Component extends DCLogic {
         const c = t.cats[this.state.page];
         return {
           title: c.title, desc: c.desc, intro: t.pageIntro, back: t.back,
+          about: (this.state.page === 0 && this.state.work === 0) ? t.shopOraAbout : null,
           works: Array.from({ length: c.count }, (_, j) => ({
             pick: () => { if (this.dragged) return; this.setState({ work: j }); },
             style: (() => {

@@ -269,6 +269,22 @@ a:hover{color:var(--label);opacity:1;}
         </div>
         <button onClick="{{ page.next }}" aria-label="next" style="width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:17px;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--ink);">›</button>
       </div>
+      <sc-if value="{{ page.about }}" hint-placeholder-val="{{ false }}">
+        <section style="display:flex;flex-direction:column;gap:22px;max-width:70em;align-self:center;width:100%;padding-top:clamp(8px,2vw,20px);">
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <h3 style="margin:0;font-size:clamp(22px,3vw,32px);font-weight:600;line-height:1.3;">{{ page.about.title }}</h3>
+            <p style="margin:0;font-size:clamp(15px,1.7vw,18px);line-height:1.85;color:var(--ink-soft);max-width:46em;">{{ page.about.lead }}</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,2.4vw,30px);">
+            <sc-for list="{{ page.about.blocks }}" as="b" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;gap:9px;padding:20px 20px 22px;border-radius:20px;border:1px solid var(--line);background:var(--card);">
+                <span style="font-size:12.5px;letter-spacing:.14em;color:var(--label);">{{ b.label }}</span>
+                <p style="margin:0;font-size:14.5px;line-height:1.85;color:var(--ink-soft);">{{ b.text }}</p>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+      </sc-if>
     </div>
   </sc-if>
 
