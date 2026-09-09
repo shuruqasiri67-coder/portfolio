@@ -122,7 +122,7 @@ const STR = {
 };
 
 class Component extends DCLogic {
-  state = { lang: "ar", theme: "light", active: null, copied: false, svc: 0, proj: 0, page: null, work: 0, view: "desktop" };
+  state = { lang: "ar", theme: "light", active: null, copied: false, svc: 0, proj: 0, page: null, work: 0 };
   canvasRef = React.createRef();
   railRef = React.createRef();
 
@@ -343,16 +343,11 @@ class Component extends DCLogic {
       t, dir: lang === "ar" ? "rtl" : "ltr",
       langLabel: lang === "ar" ? "EN" : "AR",
       themeIcon: this.state.theme === "dark" ? "☾" : "☀",
-      viewIcon: this.state.view === "mobile" ? "🖥" : "📱",
-      viewLabel: this.state.view === "mobile" ? (lang === "ar" ? "عرض سطح المكتب" : "Desktop view") : (lang === "ar" ? "عرض الجوال" : "Mobile view"),
-      toggleView: () => {
-        const next = this.state.view === "mobile" ? "desktop" : "mobile";
-        document.documentElement.setAttribute("data-view", next);
-        this.setState({ view: next });
-      },
       tools: t.tools, projects, services: t.services,
       links: t.links.map(l => Object.assign({}, l, {
-        iconStyle: "width:22px;height:22px;background:center/contain no-repeat url('https://cdn.simpleicons.org/" + l.slug + "/ffffff');"
+        iconStyle: "width:22px;height:22px;background-color:var(--ink);"
+          + "-webkit-mask:center/contain no-repeat url('./icons/" + l.slug + ".svg');"
+          + "mask:center/contain no-repeat url('./icons/" + l.slug + ".svg');"
       })),
       badges: [
         { label: "Claude", icon: "./icons/claude.webp", mono: "C" },
@@ -360,7 +355,7 @@ class Component extends DCLogic {
         { label: "Higgsfield", icon: "./icons/heygen.jpg", mono: "HF" },
         { label: "Canva", icon: "./icons/canva.jpg", mono: "Cv" },
         { label: "Blender", icon: "./icons/blender.png", mono: "B" },
-        { label: "n8n", icon: "https://cdn.simpleicons.org/n8n", mono: "n8" }
+        { label: "n8n", icon: "./icons/n8n.svg", mono: "n8" }
       ].map((b, i) => ({
         label: b.label, mono: b.icon ? "" : b.mono,
         iconStyle: b.icon ? "background:#fff center/86% no-repeat url('" + b.icon + "');" : "",
@@ -404,7 +399,9 @@ class Component extends DCLogic {
       nextSvc: () => this.setState(s => ({ svc: (s.svc + 1) % t.services.length })),
       email: "shuruqasiri67@gmail.com",
       mailto: "mailto:shuruqasiri67@gmail.com",
-      mailIconStyle: "width:22px;height:22px;background:center/contain no-repeat url('https://cdn.simpleicons.org/gmail/ffffff');",
+      mailIconStyle: "width:22px;height:22px;background-color:var(--ink);"
+        + "-webkit-mask:center/contain no-repeat url('./icons/gmail.svg');"
+        + "mask:center/contain no-repeat url('./icons/gmail.svg');",
       copyLabel: this.state.copied ? t.copied : t.copy,
       copyIcon: this.state.copied ? "✓" : "⧉",
       active: this.state.active,

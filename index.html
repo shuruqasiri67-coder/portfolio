@@ -45,8 +45,6 @@ a:hover{color:var(--label);opacity:1;}
 :root[data-theme="light"] a:hover{color:var(--mauve);}
 ::selection{background:#0a0a0a;color:#ffffff;}
 :focus-visible{outline:2px solid var(--mauve);outline-offset:3px;border-radius:999px;}
-:root[data-view="mobile"] body{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px var(--line);overflow-x:hidden;}
-:root[data-view="mobile"] nav{left:50%;right:auto;width:430px;transform:translateX(-50%);}
 @keyframes rvin{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 .rv{animation:rvin .6s cubic-bezier(.16,.84,.44,1) both;}
 .rv:nth-of-type(2){animation-delay:.08s;}
@@ -92,7 +90,6 @@ a:hover{color:var(--label);opacity:1;}
     <a href="#top" style="font-family:'Alnaseeb','Bodoni Moda',serif;font-size:21px;letter-spacing:.02em;">{{ t.mark }}</a>
     <div style="display:flex;align-items:center;gap:8px;">
       <a href="#work" style="display:none;font-size:14px;">{{ t.navWork }}</a>
-      <button onClick="{{ toggleView }}" aria-label="mobile view" title="{{ viewLabel }}" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:15px;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--ink);">{{ viewIcon }}</button>
       <button onClick="{{ toggleTheme }}" aria-label="theme" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:15px;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--mauve);">{{ themeIcon }}</button>
       <button onClick="{{ toggleLang }}" style="display:flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-family:'Bodoni Moda',serif;font-size:14px;letter-spacing:.08em;cursor:pointer;transition:background .25s ease,border-color .25s ease;" style-hover="background:var(--card);border-color:var(--mauve);">{{ langLabel }}</button>
     </div>
