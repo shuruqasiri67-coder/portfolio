@@ -28,10 +28,10 @@ const STR = {
       ]
     },
     cats: [
-      { title: "بناء المواقع وصفحات الهبوط", desc: "مواقع تعريفية وصفحات هبوط جاهزة للنشر.", tags: ["ويب", "صفحات هبوط"], count: 3 },
+      { title: "تصميم صفحات هبوط بسيطة", desc: "صفحات هبوط ومواقع تعريفية بسيطة جاهزة للنشر.", tags: ["ويب", "صفحات هبوط"], count: 3 },
       { title: "صناعة محتوى UGC", desc: "فيديوهات واقعية للمنتجات للمتاجر والعلامات الصغيرة.", tags: ["UGC", "فيديو"], count: 3 },
       { title: "رد آلي صوتي للحجوزات", desc: "أنظمة تستقبل المكالمات وتأخذ الحجوزات.", tags: ["صوت", "أتمتة"], count: 2 },
-      { title: "أتمتة المهام المتكررة", desc: "تحويل الإجراءات اليومية إلى أنظمة تشتغل تلقائياً.", tags: ["أنظمة", "n8n"], count: 2 }
+      { title: "أتمتة المهام المتكررة وبناء وكلاء ذكاء اصطناعي", desc: "تحويل الإجراءات اليومية إلى أنظمة تشتغل تلقائياً، ووكلاء ذكاء اصطناعي ينفّذون المهام بدل التدخل اليدوي.", tags: ["أنظمة", "وكلاء AI", "n8n"], count: 2 }
     ],
     projects: [
       { title: "ShopOra", status: "مباشر", href: "https://shoporaworld.com/", src: "https://shoporaworld.com/og-image.png", linkLabel: "زيارة الموقع ↗",
@@ -89,10 +89,10 @@ const STR = {
       ]
     },
     cats: [
-      { title: "Sites and landing pages", desc: "Profile sites and launch-ready landing pages.", tags: ["Web", "Landing"], count: 3 },
+      { title: "Simple landing page design", desc: "Clean landing pages and profile sites, ready to publish.", tags: ["Web", "Landing"], count: 3 },
       { title: "UGC content", desc: "Real-feeling product videos for small shops and brands.", tags: ["UGC", "Video"], count: 3 },
       { title: "Voice booking agent", desc: "Systems that take calls and book appointments.", tags: ["Voice", "Automation"], count: 2 },
-      { title: "Task automation", desc: "Daily routines turned into systems that run themselves.", tags: ["Systems", "n8n"], count: 2 }
+      { title: "Task automation and AI agents", desc: "Daily routines turned into systems that run themselves, and AI agents that do the work instead of manual steps.", tags: ["Systems", "AI agents", "n8n"], count: 2 }
     ],
     projects: [
       { title: "ShopOra", status: "Live", href: "https://shoporaworld.com/", src: "https://shoporaworld.com/og-image.png", linkLabel: "Visit site ↗",
