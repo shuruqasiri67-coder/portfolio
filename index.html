@@ -148,7 +148,7 @@ a:hover{color:var(--label);opacity:1;}
           <sc-for list="{{ svcList }}" as="s" hint-placeholder-count="4">
             <button onClick="{{ s.go }}" style="{{ s.rowStyle }}">
               <span style="{{ s.dotStyle }}"></span>
-              <span style="font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ s.title }}</span>
+              <span style="font-size:14px;font-weight:600;line-height:1.4;text-align:start;">{{ s.title }}</span>
             </button>
           </sc-for>
           <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;">

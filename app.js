@@ -54,9 +54,9 @@ const STR = {
     ],
     services: [
       { num: "01", title: "صناعة محتوى UGC", desc: "فيديوهات واقعية للمنتجات تناسب المتاجر والعلامات الصغيرة على تيك توك وانستقرام." },
-      { num: "02", title: "بناء المواقع وصفحات الهبوط", desc: "موقع تعريفي أو صفحة هبوط جاهزة للنشر، من الفكرة حتى التنفيذ." },
+      { num: "02", title: "تصميم صفحات هبوط بسيطة", desc: "صفحة هبوط بسيطة أو موقع تعريفي جاهز للنشر، من الفكرة حتى التنفيذ." },
       { num: "03", title: "رد آلي صوتي للحجوزات", desc: "نظام يستقبل مكالمات العملاء ويأخذ الحجز أو يجاوب على الاستفسارات المتكررة بدون تدخل." },
-      { num: "04", title: "أتمتة المهام المتكررة", desc: "تحويل الإجراءات اليومية — الردود، التنظيم، المتابعة — إلى أنظمة تشتغل تلقائياً." }
+      { num: "04", title: "أتمتة المهام المتكررة وبناء وكلاء ذكاء اصطناعي", desc: "تحويل الإجراءات اليومية — الردود، التنظيم، المتابعة — إلى أنظمة ووكلاء ذكاء اصطناعي يشتغلون تلقائياً." }
     ],
     links: [{ label: "واتساب", href: "https://wa.me/966502443133", slug: "whatsapp" }, { label: "تيك توك", href: "#", slug: "tiktok" }]
   },
@@ -113,9 +113,9 @@ const STR = {
     ],
     services: [
       { num: "01", title: "UGC content", desc: "Real-feeling product videos for small shops and brands on TikTok and Instagram." },
-      { num: "02", title: "Sites and landing pages", desc: "A profile site or a launch-ready landing page, from idea to live." },
+      { num: "02", title: "Simple landing page design", desc: "A simple landing page or profile site, ready to publish — from idea to live." },
       { num: "03", title: "Voice booking agent", desc: "A system that takes client calls, books appointments, and answers repeat questions unattended." },
-      { num: "04", title: "Task automation", desc: "Turning daily routines — replies, sorting, follow-up — into systems that run themselves." }
+      { num: "04", title: "Task automation and AI agents", desc: "Turning daily routines — replies, sorting, follow-up — into systems and AI agents that run themselves." }
     ],
     links: [{ label: "WhatsApp", href: "https://wa.me/966502443133", slug: "whatsapp" }, { label: "TikTok", href: "#", slug: "tiktok" }]
   }
