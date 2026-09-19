@@ -23,8 +23,54 @@ const STR = {
         { label: "المشكلة", text: "المتسوّقة اليوم تكتشف المواقع بشكل عشوائي — عبر فيديو عابر أو توصية من صديقة — ثم تنسى الاسم ولا تجده مرة أخرى. وحتى حين تجده، تبقى الأسئلة نفسها: هل الموقع موثوق؟ هل يشحن للسعودية؟ كم التكلفة الحقيقية بعد الشحن؟" },
         { label: "الحل", text: "تعمل المنصة كدليل تسوّق مُنسَّق. كل موقع يُضاف إليها يمرّ بمراجعة شخصية قبل النشر، ويُصنَّف ضمن أقسامه (عبايات، فساتين مناسبات، أحذية، حقائب، عطور)، مع معلوماته الأساسية: بلد المنشأ، نطاق الأسعار، وسياسة الشحن للخليج." },
         { label: "الجمهور المستهدف", text: "نساء السعودية والخليج بين ٢٥ و٤٤ سنة، يبحثن عن قطع مميزة غير متكررة بأسعار معقولة، ويفضّلن التسوّق الإلكتروني على المتاجر التقليدية." },
-        { label: "نموذج العمل", text: "المحتوى على تيك توك يبني الثقة ويعرّف بالمواقع، والمنصة تحتفظ بها وتنظّمها. الإيرادات تأتي لاحقاً من العمولات وأكواد الخصم والشراكات مع المتاجر." },
         { label: "ما يميّزها", text: "الفلترة اليدوية والحياد — لا مواقع مدفوعة ولا إعلانات، والمحتوى قائم على تجربة فعلية." }
+      ],
+      role: {
+        title: "دوري في المشروع",
+        note: "المشروع من تنفيذي بالكامل — من الفكرة حتى النشر.",
+        items: [
+          { label: "التصميم والواجهة", text: "صمّمت هوية المنصة وواجهتها بالكامل: نسخة تطبيق للجوال ونسخة موقع كامل للديسكتوب، بواجهة عربية أولاً (RTL) مع نسخة إنجليزية ووضع ليلي." },
+          { label: "البناء والتطوير", text: "بنيت صفحات الأقسام وبطاقات المتاجر وبطاقة التفاصيل، والفلترة حسب نطاق السعر، والبحث، والمفضلة، وصفحة «قبل ما تشترين من الخارج»." },
+          { label: "البحث والتوثيق", text: "راجعت كل متجر قبل نشره وتحقّقت من بياناته بنفسي: بلد المنشأ، مدة التوصيل، هل يشحن للسعودية مباشرة، الضريبة عند الاستلام، ونطاق الأسعار بالريال." },
+          { label: "المحتوى والكتابة", text: "كتبت نصوص المتاجر وتنبيهات ما قبل الشراء — الإرجاع، الجمارك والرسوم، فروقات المقاسات — بلغة قريبة من المتسوّقة السعودية." },
+          { label: "المساعد الذكي «أورا»", text: "أضفت مساعداً داخل الموقع يجاوب على أسئلة الشحن والجمارك ويرشّح المتاجر المناسبة حسب القسم والميزانية." }
+        ]
+      },
+      process: {
+        title: "مراحل العمل والأدوات",
+        note: "المنصة صُمّمت وبُنيت بواسطة وكلاء ذكاء اصطناعي داخل كلود (Claude).",
+        toolsLabel: "الأدوات المستخدمة",
+        tools: ["وكلاء ذكاء اصطناعي داخل كلود (Claude)"],
+        steps: [
+          { num: "01", title: "الفكرة والتخطيط", text: "تحديد المشكلة والجمهور وشكل المنصة والأقسام التي تُبنى عليها." },
+          { num: "02", title: "البحث وجمع البيانات", text: "التحقق من كل متجر قبل نشره: بلد المنشأ، مدة التوصيل، الشحن للسعودية، الضريبة عند الاستلام، ونطاق الأسعار بالريال." },
+          { num: "03", title: "التصميم", text: "هوية المنصة وواجهتها — عربي أولاً (RTL) مع نسخة إنجليزية ووضع ليلي، ونسخة جوال ونسخة ديسكتوب." },
+          { num: "04", title: "البناء", text: "صفحات الأقسام وبطاقات المتاجر وبطاقة التفاصيل، والفلترة حسب السعر، والبحث، والمفضلة." },
+          { num: "05", title: "المحتوى", text: "كتابة نصوص المتاجر وتنبيهات ما قبل الشراء — الإرجاع، الجمارك والرسوم، فروقات المقاسات." },
+          { num: "06", title: "الإطلاق والتحديث", text: "نشر الموقع على shoporaworld.com، ومتابعة تحديث بيانات المتاجر أولاً بأول." }
+        ]
+      },
+      shotsTitle: "من داخل المنصة",
+      shotsNote: "لقطات من نسخة الجوال ونسخة الديسكتوب.",
+      shotsPhoneLabel: "نسخة الجوال",
+      shotsWebLabel: "نسخة الديسكتوب",
+      shotsPhone: [
+        { src: "./assets/shopora/m-01-home.webp", alt: "الصفحة الرئيسية في الجوال — البحث والأقسام" },
+        { src: "./assets/shopora/m-02-stores.webp", alt: "بطاقات المتاجر مع بلد المنشأ ونطاق السعر" },
+        { src: "./assets/shopora/m-03-store-detail.webp", alt: "بطاقة متجر — الشحن والتوصيل والضريبة" },
+        { src: "./assets/shopora/m-04-store-prices.webp", alt: "تفاصيل الأسعار وما يميّز المتجر" },
+        { src: "./assets/shopora/m-05-grid.webp", alt: "تصفّح المتاجر وشريط التنقل السفلي" },
+        { src: "./assets/shopora/m-06-about.webp", alt: "صفحة «من نحن» — كيف تُختار المتاجر" },
+        { src: "./assets/shopora/m-07-about-contact.webp", alt: "التواصل ورخصة العمل الحر" },
+        { src: "./assets/shopora/m-08-shipping.webp", alt: "قبل ما تشترين من الخارج — شركات الشحن والجمارك" },
+        { src: "./assets/shopora/m-09-returns.webp", alt: "تكلفة الإرجاع وفروقات المقاسات" }
+      ],
+      shotsWeb: [
+        { src: "./assets/shopora/d-01-home.webp", alt: "نسخة الديسكتوب — الواجهة الرئيسية" },
+        { src: "./assets/shopora/d-02-categories.webp", alt: "الأقسام في نسخة الديسكتوب" },
+        { src: "./assets/shopora/d-03-featured.webp", alt: "متاجر مميزة مع فلترة نطاق السعر" },
+        { src: "./assets/shopora/d-04-store-detail.webp", alt: "بطاقة متجر بتفاصيل الشحن والإرجاع والعملة" },
+        { src: "./assets/shopora/d-05-assistant.webp", alt: "المساعد «أورا» داخل الموقع" }
       ]
     },
     cats: [
@@ -84,8 +130,54 @@ const STR = {
         { label: "Problem", text: "Shoppers find sites at random — a passing video, a friend's recommendation — then forget the name and never find it again. And even when they do, the same questions remain: is the site trustworthy? Does it ship to Saudi Arabia? What does it really cost after shipping?" },
         { label: "Solution", text: "The platform works as a curated shopping directory. Every site is personally reviewed before it goes live, then filed under its categories (abayas, occasion dresses, shoes, bags, perfume) with its essentials: country of origin, price range, and shipping policy to the Gulf." },
         { label: "Audience", text: "Women in Saudi Arabia and the Gulf aged 25 to 44, looking for distinctive pieces at reasonable prices, who prefer shopping online over traditional stores." },
-        { label: "Business model", text: "TikTok content builds trust and introduces the sites; the platform keeps and organises them. Revenue comes later from commissions, discount codes, and partnerships with the stores." },
         { label: "What sets it apart", text: "Hand-picked and independent — no paid placements, no ads, and every entry based on actual experience." }
+      ],
+      role: {
+        title: "My role",
+        note: "Built end to end by me — from the idea to the live site.",
+        items: [
+          { label: "Design & UI", text: "Designed the whole identity and interface: a mobile app view and a full desktop site, Arabic-first (RTL) with an English version and a dark mode." },
+          { label: "Build", text: "Built the category pages, store cards and detail sheets, price-range filtering, search, favourites, and the “Before you buy from abroad” guide." },
+          { label: "Research & verification", text: "Reviewed every store before publishing and checked its data myself: country of origin, delivery time, whether it ships to Saudi Arabia directly, tax on delivery, and price range in SAR." },
+          { label: "Content & copy", text: "Wrote the store write-ups and the pre-purchase notes — returns, customs and duties, sizing differences — in language close to the Saudi shopper." },
+          { label: "“Aura” assistant", text: "Added an in-site assistant that answers shipping and customs questions and recommends stores by category and budget." }
+        ]
+      },
+      process: {
+        title: "Process & tools",
+        note: "The platform was designed and built by AI agents inside Claude.",
+        toolsLabel: "Tools used",
+        tools: ["AI agents inside Claude"],
+        steps: [
+          { num: "01", title: "Idea & planning", text: "Defining the problem, the audience, and the shape of the platform and its categories." },
+          { num: "02", title: "Research & data", text: "Verifying every store before publishing: country of origin, delivery time, shipping to Saudi Arabia, tax on delivery, and price range in SAR." },
+          { num: "03", title: "Design", text: "The identity and interface \u2014 Arabic-first (RTL) with an English version and a dark mode, in a mobile view and a desktop view." },
+          { num: "04", title: "Build", text: "Category pages, store cards and detail sheets, price filtering, search, and favourites." },
+          { num: "05", title: "Content", text: "Writing the store write-ups and the pre-purchase notes \u2014 returns, customs and duties, sizing differences." },
+          { num: "06", title: "Launch & upkeep", text: "Publishing on shoporaworld.com and keeping the store data up to date." }
+        ]
+      },
+      shotsTitle: "Inside the platform",
+      shotsNote: "Screens from the mobile and desktop versions.",
+      shotsPhoneLabel: "Mobile",
+      shotsWebLabel: "Desktop",
+      shotsPhone: [
+        { src: "./assets/shopora/m-01-home.webp", alt: "Mobile home — search and categories" },
+        { src: "./assets/shopora/m-02-stores.webp", alt: "Store cards with country of origin and price range" },
+        { src: "./assets/shopora/m-03-store-detail.webp", alt: "Store sheet — shipping, delivery and tax" },
+        { src: "./assets/shopora/m-04-store-prices.webp", alt: "Price detail and what sets the store apart" },
+        { src: "./assets/shopora/m-05-grid.webp", alt: "Browsing stores with the bottom navigation" },
+        { src: "./assets/shopora/m-06-about.webp", alt: "About page — how stores are chosen" },
+        { src: "./assets/shopora/m-07-about-contact.webp", alt: "Contact details and freelance licence" },
+        { src: "./assets/shopora/m-08-shipping.webp", alt: "Before you buy from abroad — couriers and customs" },
+        { src: "./assets/shopora/m-09-returns.webp", alt: "Return costs and sizing differences" }
+      ],
+      shotsWeb: [
+        { src: "./assets/shopora/d-01-home.webp", alt: "Desktop version — main interface" },
+        { src: "./assets/shopora/d-02-categories.webp", alt: "Categories on desktop" },
+        { src: "./assets/shopora/d-03-featured.webp", alt: "Featured stores with price-range filter" },
+        { src: "./assets/shopora/d-04-store-detail.webp", alt: "Store sheet with shipping, returns and currency" },
+        { src: "./assets/shopora/d-05-assistant.webp", alt: "The “Aura” assistant inside the site" }
       ]
     },
     cats: [
