@@ -50,6 +50,12 @@ const STR = {
           { num: "06", title: "الإطلاق والتحديث", text: "نشر الموقع على shoporaworld.com، ومتابعة تحديث بيانات المتاجر أولاً بأول." }
         ]
       },
+      feedback: {
+        title: "تعليقات وتقييمات المستخدمات",
+        note: "أرشيف لتعليقات المتسوّقات وتقييماتهنّ للمنصة.",
+        label: "فتح مجلد التعليقات ↗",
+        href: "https://drive.google.com/drive/folders/19uhOTcjvpCd5UTlD-LLIXkPMENqD_6xC"
+      },
       shotsTitle: "من داخل المنصة",
       shotsNote: "لقطات من نسخة الجوال ونسخة الديسكتوب.",
       shotsPhoneLabel: "نسخة الجوال",
@@ -156,6 +162,12 @@ const STR = {
           { num: "05", title: "Content", text: "Writing the store write-ups and the pre-purchase notes \u2014 returns, customs and duties, sizing differences." },
           { num: "06", title: "Launch & upkeep", text: "Publishing on shoporaworld.com and keeping the store data up to date." }
         ]
+      },
+      feedback: {
+        title: "User feedback & ratings",
+        note: "An archive of shoppers' comments and ratings for the platform.",
+        label: "Open the feedback folder \u2197",
+        href: "https://drive.google.com/drive/folders/19uhOTcjvpCd5UTlD-LLIXkPMENqD_6xC"
       },
       shotsTitle: "Inside the platform",
       shotsNote: "Screens from the mobile and desktop versions.",
